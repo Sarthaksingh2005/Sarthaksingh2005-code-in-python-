@@ -1,0 +1,19 @@
+import numpy as np
+
+import numpy as np
+
+arr = np.arange(1, 21)   # start=1, stop=21 (exclusive)
+print(arr)
+
+arr = np.full((3, 3), 7)
+print(arr)
+
+arr = np.array([[1, 2, 3],
+                [4, 5, 6],
+                [7, 8, 9]])
+
+row2 = arr[1, :]   # row index 1 → 2nd row
+print(row2)
+
+col_last = arr[:, -1]   # all rows, last column
+print(col_last)
