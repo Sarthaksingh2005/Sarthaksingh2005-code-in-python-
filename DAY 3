@@ -1,0 +1,68 @@
+#create 2D array 3*3 and multiply it with scaler
+#static#
+
+import numpy as np
+a=np.array([[1,2,3],[4,5,6]])
+b=5
+print(a*b)
+
+
+
+import numpy as np
+
+# Step 1: Take dimensions from user
+rows = int(input("Enter number of rows: "))
+cols = int(input("Enter number of columns: "))
+
+# Step 2: Take input row by row
+matrix = []
+for i in range(rows):
+    row = list(map(int, input(f"Enter row {i+1} (space separated): ").split()))
+    matrix.append(row)
+
+# Convert list of lists into NumPy array
+arr = np.array(matrix)
+
+# Step 3: Multiply with a scalar
+scalar = int(input("Enter scalar value to multiply: "))
+result = arr * scalar
+
+# Step 4: Print result
+print("\nOriginal Matrix:\n", arr)
+print(f"\nMatrix after multiplying with {scalar}:\n", result)
+
+
+
+import numpy as np
+
+# Create a 3x3 array with random integers between 1 and 9
+arr = np.random.randint(1, 10, size=(3,3))
+
+print("Matrix:\n", arr)
+
+# Row-wise mean
+print("\nRow-wise mean:", arr.mean(axis=1))
+
+# Column-wise max
+print("Column-wise max:", arr.max(axis=0))
+
+# Total sum
+print("Total sum:", arr.sum())
+
+
+
+
+import numpy as np
+
+# Generate 100 random numbers between 0 and 1
+arr = np.random.rand(100)   # shape (100,)
+
+# Calculate mean
+mean_val = arr.mean()
+
+# Calculate standard deviation
+std_val = arr.std()
+
+print("Random Numbers:\n", arr)
+print("\nMean:", mean_val)
+print("Standard Deviation:", std_val)
